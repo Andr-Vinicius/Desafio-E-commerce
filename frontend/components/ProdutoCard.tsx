@@ -50,18 +50,17 @@ export function ProdutoCard({ produto }: Props) {
           R$ {Number(produto.preco).toFixed(2).replace('.', ',')}
         </p>
 
-        <div className="flex flex-col gap-2 mt-auto pt-4">
-          <button className="w-full bg-[#3b3dbf] hover:bg-blue-700 text-white text-sm py-2 rounded transition">
-            Ver detalhes
-          </button>
+        <p className="text-gray-400 text-xs mt-1 leading-relaxed line-clamp-2">
+        {produto.descricao}
+      </p>
           <button
             onClick={handleAdicionar}
             className="w-full bg-[#3b3dbf] hover:bg-blue-700 text-white text-sm py-2 rounded transition"
           >
-            {adicionado ? 'Adicionado ✓' : 'Adicionar ao Carrinho'}
+            {adicionado ? 'Adicionado' : 'Adicionar ao Carrinho'}
           </button>
         </div>
-      </div>
+
     </div>
   );
 }
